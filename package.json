@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "a school management system",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node Database/server"
   },
   "author": "Newton Kamau",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
     "mongoose": "^5.13.3"
   }
 }

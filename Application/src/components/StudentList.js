@@ -19,7 +19,8 @@ const StudentList = () => {
 
   const submitHandler = (id) => {
     window.alert("Are you sure ?");
-   // Students.pop(id)
+    students.pop(id)
+    console.log(students);
   }
   return (
     <div>
@@ -38,8 +39,8 @@ const StudentList = () => {
           </thead>
           <tbody>
             {students.map((student) => (
-              <tr key={student.id}>
-                <td>{student.id}</td>
+              <tr key={student._id}>
+                <td>{student._id}</td>
                 <td>{student.name}</td>
                 <td>{student.sex}</td>
                 <td>{student.grade}</td>
@@ -51,11 +52,11 @@ const StudentList = () => {
                         className="btn btn-sm "
                         variant="danger"
                         type="submit"
-                        onClick={()=>submitHandler(student.id)}
+                        onClick={()=>submitHandler(student._id)}
                       >
                         Delete
                       </Button>
-                      <a href={`/student/${student.id}`}>
+                      <a href={`/student/${student._id}`}>
                         <Button className="btn btn-secondary">Edit</Button>
                       </a>
                     </>

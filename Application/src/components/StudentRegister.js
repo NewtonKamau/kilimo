@@ -4,7 +4,7 @@ import FormContainer from "./FormContainer";
 
 const StudentRegister = () => {
     const [student,setStudent] = useState({
-      fName: "",
+      name: "",
       sex: "",
       grade: "",
       teacher: "",
@@ -14,13 +14,13 @@ const StudentRegister = () => {
         const inputStudent = e.target.value;
         setStudent(() => {
             if (
-              inputStudent === "fName" &&
+              inputStudent === "name" &&
               inputStudent === "sex" &&
               inputStudent === "grade" &&
               inputStudent === "teacher"
             ) {
                 setStudent(newStudent)
-                //console.log(setStudent);
+                console.log(setStudent);
             }
         })
         console.log(newStudent);
@@ -38,7 +38,7 @@ const StudentRegister = () => {
             <FormControl
               type="text"
               required={true}
-              name="fName"
+              name="name"
               placeholder="Enter name"
               value={student.fName}
               onChange={handleChange}

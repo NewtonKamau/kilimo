@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Form, Button, FormControl } from "react-bootstrap";
 import FormContainer from "./FormContainer";
-import Forms from "../Forms.js";
 
 const FormEdit = () => {
     const [name, setName] = useState("");
@@ -13,7 +12,7 @@ const FormEdit = () => {
     };
   return (
     <FormContainer>
-      <h1 className="App">Register Form</h1>
+      <h1 className="App"> Form Edit</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="name">
           <Form.Label>Name</Form.Label>

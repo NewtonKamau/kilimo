@@ -26,7 +26,7 @@ const FormList = () => {
           <thead>
             <tr>
               <th>id</th>
-              <th>Name</th>
+              <th>Form</th>
               <th>Students</th>
               <th>Teacher</th>
               <th>Action</th>
@@ -34,10 +34,10 @@ const FormList = () => {
           </thead>
           <tbody>
             {forms.map((form) => (
-              <tr key={form.id}>
-                <td>{form.id}</td>
+              <tr key={form._id}>
+                <td>{form._id}</td>
                 <td>{form.name}</td>
-                <td>{form.students}</td>
+                <td>{form.student}</td>
                 <td>{form.teacher}</td>
                 <td>
                   {
@@ -45,11 +45,11 @@ const FormList = () => {
                       <Button
                         className="btn btn-sm "
                         variant="danger"
-                        onClick={() => deleteHander(form.id)}
+                        onClick={() => deleteHander(form._id)}
                       >
                         Delete
                       </Button>
-                      <a href={`/form/${form.id}`}>
+                      <a href={`/form/${form._id}`}>
                         <Button className="btn btn-secondary">Edit</Button>
                       </a>
                     </>

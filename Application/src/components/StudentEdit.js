@@ -27,7 +27,7 @@ const StudentEdit = () => {
             <FormControl
               type="text"
               students
-              name="fName"
+              name="name"
               placeholder="Enter name"
               value={student.name}
               onChange={handleChange}
